@@ -4,14 +4,6 @@ body {
     font-family: 'Roboto Slab', serif;
   }
   
-  .series-frame {
-    max-width: 600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    border: 2px solid #EEE;
-    margin: 30px;
-    padding: 10px;
+  .calculator-form {
+    padding: 20px;
   }
-  
