@@ -1,9 +1,8 @@
-let numberOfSeasons = 6;
-let numberOfEpisodes = 12;
-let episodeTime = 45;
-let commercialTime = 5;
-let totalShowTime = (episodeTime + commercialTime) * numberOfEpisodes * numberOfSeasons
+let episodeTitle = "Modern events made clear by prophecy";
+let episodeDuration = 30;
+let hasBeenWatched = true;
 
-let paragraph = document.querySelector("#info");
-paragraph.innerHTML = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per seasons.
-Total viewing time : ${totalShowTime}.`;
+const episode = document.querySelector("#episode-info");
+episode.innerHTML = `Episode : ${episodeTitle}. 
+Duratiion : ${episodeDuration}. 
+${hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
