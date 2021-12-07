@@ -9,7 +9,10 @@ class Episode{
   let firstEpisode = new Episode("My name is", 10, true);
   let secondEpisode = new Episode("How are you ?", 30, false);
   let thirdEpisode = new Episode("Where are come from ?", 20, true);
-  let episodes = [firstEpisode, secondEpisode, thirdEpisode]
+  let episodes = new Array();
+  episodes.push(firstEpisode);
+  episodes.push(secondEpisode);
+  episodes.push(secondEpisode);
 
   const body = document.querySelector("body");
   
