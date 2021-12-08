@@ -16,7 +16,7 @@ class Episode{
 
   const body = document.querySelector("body");
   
-  for(let i = 0; i < episodes.length; i++){
+  for(let i in episodes){
         let newDiv = document.createElement("div");
         newDiv.classList.add("series-frame");
         let newTitle = document.createElement("h2");
