@@ -1,28 +1,43 @@
 class Episode{
-    constructor(title, duration, hasBeenWatched, ratings){
+    constructor(title, duration, hasBeenWatched){
       this.title = title;
       this.duration = duration;
       this.hasBeenWatched = hasBeenWatched;
-      this.ratings = ratings;
+      this.ratings = [];
     }
-  }
 
-  const calculateRatingsAverage = (ratings) => {
-      if(ratings.length === 0){
+    addRating(rating){
+      if(isNaN(rating)){
+        console.log("Rating must be a number!");
+      } else{
+        this.ratings.push(rating);
+      }
+    }
+
+    calculateRatingsAverage() {
+      if(this.ratings.length === 0){
         return 0;
       } else{
         let sumOfRatinngs = 0;
-        for(let rating of ratings){
+        for(let rating of this.ratings){
           sumOfRatinngs += rating;
         }
-        const averageOfratings = sumOfRatinngs / ratings.length;
+        const averageOfratings = sumOfRatinngs / this.ratings.length;
         return averageOfratings;
-      }
-  };
+    }
+  }
+
+  }
+
   
-  let firstEpisode = new Episode("My name is", 10, true, [2, 4, 1, 5]);
-  let secondEpisode = new Episode("How are you ?", 30, false, [5, 5, 3]);
-  let thirdEpisode = new Episode("Where are come from ?", 20, true, []);
+  let firstEpisode = new Episode("My name is", 10, true);
+  firstEpisode.addRating(5);
+  firstEpisode.addRating(5);
+  firstEpisode.addRating(2);
+  let secondEpisode = new Episode("How are you ?", 30, false);
+  secondEpisode.addRating(3);
+  secondEpisode.addRating(1);
+  let thirdEpisode = new Episode("Where are come from ?", 20);
   let episodes = new Array();
   episodes.push(firstEpisode);
   episodes.push(secondEpisode);
@@ -38,8 +53,8 @@ class Episode{
         let newParagraph = document.createElement("p");
         newParagraph.innerHTML = `${episode.title}. 
         ${episode.duration} minutes.
-        Average of ratings : ${calculateRatingsAverage(episode.ratings) !== 0 ? 
-          calculateRatingsAverage(episode.ratings).toFixed(1) : "Not yet ratings."}
+        Average of ratings : ${episode.calculateRatingsAverage() !== 0 ? 
+          episode.calculateRatingsAverage().toFixed(1) : "Not yet ratings."}
         ${episode.hasBeenWatched ? 'Already been watched' : 'Not yet watched'}`;
         newDiv.append(newTitle);
         newDiv.append(newParagraph);
