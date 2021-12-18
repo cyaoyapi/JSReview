@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 buttonTellMe.textContent = "continue Tell Me Please!";
                 break;
             case 5:
-                newParagraph.innerHTML = "Currently wife is pregnant. Our new born will born near June 2022 by the grace of God.";
+                newParagraph.innerHTML = "Currently my wife is pregnant. Our new born will born near June 2022 by the grace of God.";
                 buttonTellMe.textContent = "Ended the story";
                 break;
             default:
