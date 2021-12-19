@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Create a password</h1>
+        <h4>Select options of your secure password</h4>
+        <form id="form">
+            <p>
+                <input type="checkbox" id="include_digits" value="include_digits" checked>
+                <label for="include_digits">Include digits</label>
+            </p>
+            <p>
+                <input type="checkbox" id="include_lowercase" value="include_lowercase" checked>
+                <label for="include_lowercase">Include lowercases</label>
+            </p>
+            <p>
+                <input type="checkbox" id="include_uppercase" value="include_uppercase" checked>
+                <label for="include_uppercase">Include uppercases</label>
+            </p>
+            <p>
+                <input type="checkbox" id="include_special_characters" value="include_special_characters">
+                <label for="include_special_characters">Include special charaters</label>
+            </p>
+            <p>
+                <input type="number" id="password_length" min="8" max="20" required>
+                <label for="password_length">Password length</label>
+            </p>
+            <p>
+                <input type="number" id="quantity" min="1" max="30" required>
+                <label for="quantity">Number of password to generate</label>
+            </p>
+            <p>
+                <button id="submit">Generate</button>
+            </p>
+        </form> 
+        <hr>
+        <div id="result">
+
+        </div>           
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
